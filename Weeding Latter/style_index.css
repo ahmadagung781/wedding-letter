@@ -1,0 +1,308 @@
+:root{
+    --white: #ffff;
+    --blue-muted: #55acc2;
+    --blue-hover: #5593a2;
+    --grey: #ccc;
+    --light-grey: #d4d4d4;
+    --very-light-grey: #eee;
+    --dark-grey: #999;
+    --dark: #151515;
+    --black: #000;
+}
+
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Pintu */
+body.transition{
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.open{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 3;
+    overflow-y: hidden;
+    transition: transform 1s ease-in-out;
+}
+
+.doors{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.door{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transform-origin:center left ;
+    transition: transform 1s, filter 0.5s;
+    overflow: hidden; 
+}
+
+.doors img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+.door .left{
+    left: 25px;
+    
+    
+}
+.door .right{
+    right: 25px;
+    transform-origin: center left;
+}
+.heading-door{
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    font-size: 50px;
+    margin: auto;
+    transform: translateX(0%);
+}
+.heading-door.left{
+    left: 0%;
+}
+
+.heading-door.right{
+    right: 0%;
+    
+}
+.huruf-sambung{
+    font-family: 'Dancing Script', cursive;
+}
+/* .love-emote{
+    font-size: 5rem; 
+    margin: 10px 0;
+} */
+/* Hero */
+#hero-section h1{
+    font-size: 64px;
+}
+#hero-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(241, 78, 149, 0.4);
+}
+
+#hero-section {
+    width: 100%;
+    height: 100vh;
+    background: url("img/hero-wedding.jpg") top left;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: 2;
+}
+
+#hero-section .container{
+    position: relative;
+}
+
+#hero-section .btn-get-started{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 25px;
+    color: var(--blue-muted);
+    background:var(--white);
+}
+
+#hero-section .btn-get-started:hover{
+    background:var(--blue-muted);
+    color: var(--white);
+}
+
+.spark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* Pembuka Undangan */
+.text-grey{
+    color: var(--light-grey);
+}
+
+.pembuka-section{
+    padding-top: 75px;
+}
+
+.section-title{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h3{
+    margin: 15px 0 0 0;
+    font-size: 32px;
+}
+
+.section-title p{
+    margin: 15px 0 0 0;
+}
+
+.section-bg{
+    background-color: var(--very-light-grey);
+}
+
+#content-section{
+    overflow-x:hidden;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--very-light-grey);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--light-grey);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--grey);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--grey);
+}
+/* Acara */
+.btn-blue-muted{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: var(--blue-muted);
+    background: var(--white);
+}
+
+.btn-blue-muted:hover{
+    background: var(--white);
+    color: var(--blue-hover);
+} 
+
+.border-black{
+    border-radius: 15px;
+    border: 2px solid var(--black);
+}
+
+/* Ucapan */
+#ucapan-section .container{
+    text-align: center;
+    width: 500px;
+    max-width: 600px;
+}
+
+.input-area{
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid var(--blue-muted);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+textarea {
+    resize: none;
+    height: 60px;
+  }
+
+.attendance {
+    text-align: left;
+    margin-bottom: 12px;
+    color: #666;
+  }
+  
+.attendance label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+.greeting-list {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+.greeting-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+.greeting-card p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+.greeting-card .name-location {
+    font-weight: bold;
+    color: #666;
+  }
+  
+.greeting-card .timestamp {
+    font-size: 0.85em;
+    color: #aaa;
+    margin-top: 5px;
+  }
